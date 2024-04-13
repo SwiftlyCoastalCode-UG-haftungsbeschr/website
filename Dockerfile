@@ -8,7 +8,7 @@ RUN npm run build
 # Install serve globally
 RUN npm install -g serve
 
-FROM gcr.io/distroless/nodejs18-debian11
+FROM node:18
 COPY --from=build-env /app/dist/ /app/
 WORKDIR /app
 CMD ["serve", "-s"]
