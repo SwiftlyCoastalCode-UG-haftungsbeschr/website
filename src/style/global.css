@@ -1,0 +1,24 @@
+.logo {
+    border-radius: 25px;
+  }
+  .primary {
+    color: #0077be;
+  }
+  .secondary {
+    color: #ff8c66;
+  }
+  .yellow {
+    color: #e0c982;
+  }
+  .tertiary {
+    color: #4caf50;
+  }
+  .background {
+    background-color: #e0e0e0;
+  }
+  .background-darker {
+    background-color: #c0c0c0;
+  }
+  .content {
+  align-content: center;
+}

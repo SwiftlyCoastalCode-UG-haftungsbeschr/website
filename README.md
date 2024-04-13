@@ -1,4 +1,4 @@
-# dresspal-frontend
+# SwiftlyCoastalCode
 
 ## Project setup
 ```
