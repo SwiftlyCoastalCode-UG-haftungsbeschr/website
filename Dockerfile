@@ -1,4 +1,5 @@
 FROM node:18 AS build-env
+RUN npm install -g http-server
 COPY . /app
 WORKDIR /app
 
