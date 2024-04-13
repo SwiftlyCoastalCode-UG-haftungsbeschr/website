@@ -1,5 +1,5 @@
 FROM node:18 AS build-env
-RUN npm install -g http-server
+RUN npm install -g serve
 COPY . /app
 WORKDIR /app
 
@@ -10,4 +10,4 @@ RUN npm install
 COPY . .
 # build app for production with minification
 RUN npm run build
-CMD [ "http-server", "dist" ]
+CMD [ "serve -s",  "dist" ]
