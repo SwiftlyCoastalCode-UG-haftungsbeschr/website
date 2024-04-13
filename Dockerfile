@@ -2,11 +2,11 @@ FROM node:18 AS build-env
 COPY . /app
 WORKDIR /app
 
-RUN npm ci
-RUN npm run build
+COPY package*.json ./
+# install dependencies
+RUN npm install
 
-FROM gcr.io/distroless/nodejs18-debian11
-COPY --from=build-env /app/dist/ /app/
-WORKDIR /app
-RUN npm install -g serve
-CMD ["serve", "-s"]
+COPY . .
+# build app for production with minification
+RUN npm run build
+CMD [ "http-server", "dist" ]
